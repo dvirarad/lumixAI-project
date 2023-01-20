@@ -67,9 +67,10 @@ The statistics-manager service exposes the following:
     -   GET API [http://localhost:5000/audit?text=](http://localhost:5000/audit?text=)<string>&startTime=<number>&endTime=<number>
     
     ![enter image description here](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgIEF1ZGl0IFNlcnZpY2UKCmFjdG9yIFVzZXIKCnBhcnRpY2lwYW50IEFNUVAgYXMgUgAID3VkaXQANgcgYXMgQQAoDU1vbmdvREIgYXMgRApSLT4gQTogc3Vic2NyaXZlIHRvIGEAeAVldmVudApBLT5EOiBpbnNlcnQgbmV3IHJvdyB0byBEQgogClVzZXIAOQdlYXJjaCBieSBkYXRlIGFuZC9vcgAOCHRleABBCHJ1bm5pbmcgaW5kZXggcXVlcnkgdG8gZmV0Y2ggdGhlIGRhdGEKCgoKCgo&s=modern-blue)
+    
     2.  Word popolated API
     
-    -   GET [http://localhost:5000/word-counter?top=](http://localhost:5000/word-counter?top=)<number>
+    -   GET [http://localhost:5000/word-counter?top=<number>](http://localhost:5000/word-counter?top=<number>)
     -   This API returns the most populated words in the MongoDB.
 
 ![enter image description here](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgIFdvcmQgQ291bnRlciBTZXJ2aWNlCgphY3RvciBVc2VyCgpwYXJ0aWNpcGFudCBBTVFQIGFzIFIACQ4AOQwAPQcgYXMgQQAvDU1vbmdvREIgYXMgRApSLT4gQTogc3Vic2NyaXZlIHRvIHdvcmQgY291bnQgZXZlbnQKQS0-QTogcnVubmluZyBncm91cEJ5IGxvZ2ljIHRvIG9wdGltemUgdGhlIGluc2VyAC0FRDogdXBzZXJ0ABMFREIgdXNpbmcgYnVsayBvcGVyYXRpb24KIApVc2VyAIB_BmFzayBmb3IgdG9wAIB_BXMAQAcAcQhzb3J0IHF1ZXJ5IHRvIGZldGNoAG8FbW9zdCBwb3BvbGF0ZQAzBwoKCgoK&s=omegapple)
