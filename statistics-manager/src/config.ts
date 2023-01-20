@@ -1,0 +1,10 @@
+export const RABBITMQ_HOST_NAME =  process.env.RABBITMQ_HOST_NAME || "localhost"
+export const RMQ_LOGS_EXCHANGE =  "logs_exchange"
+export const RABBITMQ_LOGS_ROUTE=  'logs-route'
+export const RABBITMQ_LOGS_QUEUE=  'logs-queue'
+export const RMQ_WORDS_COUNTER_EXCHANGE =  "words-counter"
+export const RABBITMQ_WORDS_COUNTER_ROUTE=  'words-counter'
+export const RABBITMQ_WORDS_COUNTER_QUEUE=  'words-counter-queue'
+export const TOTAL_INSERT_DATA_PER_REQUEST  = process.env.TOTAL_INSERT_DATA_PER_REQUEST ||2000
+export const MONGO_HOST_NAME= process.env.MONGO_HOST_NAME || "localhost";
+export const TOPIC =  'topic'
