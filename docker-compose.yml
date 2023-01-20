@@ -1,0 +1,54 @@
+version: "3"
+networks:
+  default:
+services:
+  data-search:
+    build:
+      context: data-search
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - default
+    links:
+      - mongodb
+    environment:
+      MONGO_HOST_NAME: mongodb
+      RABBITMQ_HOST_NAME: rabbitmq
+      TOTAL_INSERT_DATA_PER_REQUEST: 2000
+
+
+  statistics-manager:
+    build:
+      context: statistics-manager
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - default
+    links:
+      - mongodb
+    environment:
+      MONGO_HOST_NAME: mongodb
+      RABBITMQ_HOST_NAME: rabbitmq
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - default
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    networks:
+      - default
