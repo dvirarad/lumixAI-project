@@ -24,13 +24,13 @@ jobs:
     - name: Build and test data-search service
       run: |
         cd data-search
-        npm ci
+        npm install
         npm run build
         npm test
 
     - name: Build and test statistics-manager service
       run: |
         cd statistics-manager
-        npm ci
+        npm install
         npm run build
         npm test
