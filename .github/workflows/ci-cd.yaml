@@ -21,11 +21,16 @@ jobs:
       with:
         node-version: 14
 
-    - name: Install dependencies
-      run: npm ci
+    - name: Build and test data-search service
+      run: |
+        cd data-search
+        npm ci
+        npm run build
+        npm test
 
-    - name: Build project
-      run: npm run build
-
-    - name: Run tests
-      run: npm test
+    - name: Build and test statistics-manager service
+      run: |
+        cd statistics-manager
+        npm ci
+        npm run build
+        npm test
